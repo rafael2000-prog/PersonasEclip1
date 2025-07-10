@@ -1,0 +1,62 @@
+<h2>{{ texto }} - Ecuador</h2>
+
+<form>
+  <label for="txtCedula">ID</label>
+  <input id="txtCedula" type="text" [(ngModel)]="cedula" name="cedula" />
+
+  <label for="txtNombre">Usuario</label>
+  <input id="txtNombre" type="text" [(ngModel)]="nombre" name="nombre" />
+
+  <label for="txtDireccion">Dirección</label>
+  <input id="txtDireccion" type="text" [(ngModel)]="direccion" name="direccion" />
+
+  <button type="button" (click)="guardar()">{{ editId ? 'Actualizar' : 'Guardar' }}</button>
+</form>
+
+<p><strong>Hola </strong> {{ nombre }}</p>
+
+<!--<table border="1" style="margin-top: 20px;">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Dirección</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let contacto of contactos">
+      <td>{{ contacto.nombre }}</td>
+      <td>{{ contacto.direccion }}</td>
+      <td>
+        <button (click)="editar(contacto)">Editar</button>
+        <button (click)="eliminar(contacto.id)">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>-->
+
+<h2>Webservice Java Backend</h2>
+
+<ul>
+  <li *ngFor= "let contacto of contactosBack">{{contacto.cedula}} - {{contacto.nombre}} - {{contacto.direccion}}</li>
+</ul>
+
+<!-- 
+<table *ngIf="listaDatos.length > 0" border="10" style="margin-top: 10px;">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Dirección</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pp of listaDatos; let i = index">
+      <td>{{ pp.nombre }}</td>
+      <td>{{ pp.direccion }}</td>
+      <td>
+        <button (click)="editar(i)">Editar</button>
+        <button (click)="eliminar(i)">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table> -->
